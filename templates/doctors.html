@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Add Doctor</h2>
+
+<div class="card">
+
+<form method="post">
+
+<input name="name" placeholder="Doctor Name" required>
+<input name="speciality" placeholder="Speciality" required>
+
+<button>Add Doctor</button>
+
+</form>
+
+</div>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Speciality</th>
+</tr>
+
+{% for d in data %}
+
+<tr>
+<td>{{d.id}}</td>
+<td>{{d.name}}</td>
+<td>{{d.speciality}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

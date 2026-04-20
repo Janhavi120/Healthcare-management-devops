@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Medical Records</h2>
+
+<div class="card">
+
+<form method="post">
+
+<input name="patient" placeholder="Patient Name" required>
+<input name="diagnosis" placeholder="Diagnosis" required>
+<input name="prescription" placeholder="Prescription" required>
+
+<button>Save Record</button>
+
+</form>
+
+</div>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Patient</th>
+<th>Diagnosis</th>
+<th>Prescription</th>
+</tr>
+
+{% for r in data %}
+
+<tr>
+<td>{{r.id}}</td>
+<td>{{r.patient}}</td>
+<td>{{r.diagnosis}}</td>
+<td>{{r.prescription}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

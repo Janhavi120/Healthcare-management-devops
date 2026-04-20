@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Book Appointment</h2>
+
+<div class="card">
+
+<form method="post">
+
+<input name="patient" placeholder="Patient Name" required>
+<input name="doctor" placeholder="Doctor Name" required>
+<input name="date" placeholder="Date" required>
+
+<button>Book Appointment</button>
+
+</form>
+
+</div>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Patient</th>
+<th>Doctor</th>
+<th>Date</th>
+</tr>
+
+{% for a in data %}
+
+<tr>
+<td>{{a.id}}</td>
+<td>{{a.patient}}</td>
+<td>{{a.doctor}}</td>
+<td>{{a.date}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}
