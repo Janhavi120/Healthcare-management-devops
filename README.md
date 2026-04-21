@@ -2,19 +2,19 @@
 Flask + SQLite based healthcare system with Docker and Terraform.
 
 # Features
-Dashboard
-Patients
-Doctors
-Appointments
-Medical Records
+- Dashboard
+- Patients
+- Doctors
+- Appointments
+- Medical Records
 
 # Tech Stack
-Python Flask
-SQLite
-Docker
-Terraform
-Run Locally
-python app.py
+- Python Flask
+- SQLite
+- Docker
+- Terraform
+- Run Locally
+- python app.py
 
 # Run with Docker
 docker-compose up 
