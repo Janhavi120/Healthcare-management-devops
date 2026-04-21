@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Healthcare System</title>
-<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Healthcare Service</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
 </head>
-
 <body>
 
-<nav>
-<a href="/">Home</a>
-<a href="/patients">Patients</a>
-<a href="/doctors">Doctors</a>
-<a href="/appointments">Appointments</a>
-<a href="/records">Records</a>
-</nav>
+<div class="layout">
 
-<div class="container">
-{% block content %}{% endblock %}
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Healthcare</h2>
+        <a href="/">Dashboard</a>
+        <a href="/patients">Patients</a>
+        <a href="/doctors">Doctors</a>
+        <a href="/appointments">Appointments</a>
+        <a href="/records">Records</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <!-- Top Header -->
+        <div class="topbar">
+            <h1>Healthcare Service</h1>
+        </div>
+
+        <!-- Page Content -->
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+    </div>
+
 </div>
 
 </body>
